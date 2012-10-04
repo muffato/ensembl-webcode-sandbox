@@ -37,10 +37,10 @@ sub update_conf {
   $SiteDefs::ENSEMBL_ERRORLOG  = "$LOG$DATESTAMP.error_log";
   $SiteDefs::ENSEMBL_CUSTOMLOG = "$LOG$DATESTAMP.access_log ensembl_extended";
 
-  $SiteDefs::ENSEMBL_USERDB_NAME            = 'ensembl_web_user_db';
+  $SiteDefs::ENSEMBL_USERDB_NAME            = 'ensembl_web_user_db_dev';
   $SiteDefs::ENSEMBL_USERDB_USER            = 'ensro';
-  $SiteDefs::ENSEMBL_USERDB_HOST            = 'ensdb-userdb.internal.sanger.ac.uk';
-  $SiteDefs::ENSEMBL_USERDB_PORT            =  5305;
+  $SiteDefs::ENSEMBL_USERDB_HOST            = 'ensdb-web-15.internal.sanger.ac.uk';
+  $SiteDefs::ENSEMBL_USERDB_PORT            =  5307;
   $SiteDefs::ENSEMBL_USER_COOKIE            = 'ENSEMBL_DEV_USER';
   $SiteDefs::ENSEMBL_SESSION_COOKIE         = 'ENSEMBL_DEV_SESSION';
   $SiteDefs::ENSEMBL_MART_ENABLED           = 0;
