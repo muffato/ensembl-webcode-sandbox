@@ -4,9 +4,12 @@
 ## $SiteDefs::ENSEMBL_SERVERROOT = '/path to root of ensembl tree';
 
 $SiteDefs::ENSEMBL_PLUGINS = [
-  'EnsEMBL::Matt'       => $SiteDefs::ENSEMBL_SERVERROOT.'/sandbox-mm14',
-  'EnsEMBL::Genoverse'  => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/genoverse',
-  'EnsEMBL::Ensembl'    => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/ensembl',
+  'EnsEMBL::Matt'         => $SiteDefs::ENSEMBL_SERVERROOT.'/sandbox-mm14',
+  'EnsEMBL::Staging'      => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/staging',
+  'EnsEMBL::Sanger_dev'   => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/dev',
+  'EnsEMBL::Genoverse'    => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/genoverse',
+  'EnsEMBL::Sanger'       => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/sanger',
+  'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/ensembl'
 ];
 
 1;
