@@ -9,6 +9,7 @@ $SiteDefs::ENSEMBL_PLUGINS = [
   'EnsEMBL::Sanger_dev'   => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/dev',
   'EnsEMBL::Genoverse'    => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/genoverse',
   'EnsEMBL::Sanger'       => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/sanger',
+  'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/docs',
   'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/ensembl'
 ];
 
