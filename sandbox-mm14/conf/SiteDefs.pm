@@ -20,8 +20,8 @@ sub update_conf {
   $SiteDefs::ENSEMBL_DEBUG_FLAGS           |= $SiteDefs::ENSEMBL_DEBUG_VERBOSE_STARTUP;
   $SiteDefs::ENSEMBL_DEBUG_FLAGS           |= $SiteDefs::ENSEMBL_DEBUG_EXTERNAL_COMMANDS;
 
-  SiteDefs::tmp(  $SiteDefs::ENSEMBL_SERVERROOT.'/tmp/' );
-  SiteDefs::logs( $SiteDefs::ENSEMBL_SERVERROOT.'/logs/' );
+  $SiteDefs::ENSEMBL_TMP_DIR                = $SiteDefs::ENSEMBL_SERVERROOT.'/tmp/';
+  $SiteDefs::ENSEMBL_LOGDIR                 = $SiteDefs::ENSEMBL_SERVERROOT.'/logs/';
 
   $SiteDefs::ENSEMBL_MAIL_ERRORS            = 0;
  my  $LOG = $SiteDefs::ENSEMBL_SERVERROOT."/logs/".$SiteDefs::ENSEMBL_SERVER;
