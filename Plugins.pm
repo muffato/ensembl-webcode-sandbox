@@ -6,11 +6,12 @@
 $SiteDefs::ENSEMBL_PLUGINS = [
   'EnsEMBL::Matt'         => $SiteDefs::ENSEMBL_SERVERROOT.'/sandbox-mm14',
   'EnsEMBL::Staging'      => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/staging',
+  'EnsEMBL::Widgets'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/widgets',
   'EnsEMBL::Sanger_dev'   => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/dev',
   'EnsEMBL::Genoverse'    => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/genoverse',
   'EnsEMBL::Sanger'       => $SiteDefs::ENSEMBL_SERVERROOT.'/sanger-plugins/sanger',
-  'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/docs',
-  'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/ensembl'
+  'EnsEMBL::Ensembl'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/ensembl',
+  'EnsEMBL::Docs'         => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/docs',
 ];
 
 1;
