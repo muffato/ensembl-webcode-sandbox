@@ -13,7 +13,7 @@ sub update_conf {
   $SiteDefs::BIOPERL_DIR                    = '/localsw/cvs/bioperl-live/';
   $SiteDefs::MINI_BIOPERL_161_DIR           = '/localsw/cvs/mini-bioperl-161/';
   $SiteDefs::ENSEMBL_PRIVATE_AUTH           = '/localsw/etc/privateauth';
-  $SiteDefs::DATAFILE_BASE_PATH             = '/nfs/ensnfs-live';
+  $SiteDefs::DATAFILE_BASE_PATH             = '/nfs/ensnfs-webdev/staging/';
 
   $SiteDefs::ENSEMBL_API_VERBOSITY          = 'WARNING'; ## Shut up the API a bit!
   $SiteDefs::ENSEMBL_DEBUG_FLAGS           |= $SiteDefs::ENSEMBL_DEBUG_MAGIC_MESSAGES;
