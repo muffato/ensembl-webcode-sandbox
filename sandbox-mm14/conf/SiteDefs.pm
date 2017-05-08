@@ -1,7 +1,16 @@
 use strict;
 
 package EnsEMBL::Matt::SiteDefs;
+
 sub update_conf {
+  $SiteDefs::ENSEMBL_PORT                   = 9073;
+
+  $SiteDefs::ENSEMBL_TMP_DIR                = $SiteDefs::ENSEMBL_SERVERROOT.'/tmp/';
+  $SiteDefs::ENSEMBL_LOGDIR                 = $SiteDefs::ENSEMBL_SERVERROOT.'/logs/';
+}
+
+
+sub old_update_conf {
   $SiteDefs::ENSEMBL_PORT                   = 9073;
   $SiteDefs::ENSEMBL_PROXY_PORT             = undef;
   $SiteDefs::ENSEMBL_SERVERNAME             = undef;
