@@ -4,9 +4,18 @@
 ## $SiteDefs::ENSEMBL_SERVERROOT = '/path to root of ensembl tree';
 
 $SiteDefs::ENSEMBL_PLUGINS = [
-  'EnsEMBL::Matt'         => $SiteDefs::ENSEMBL_SERVERROOT.'/sandbox-mm14',
-  'EnsEMBL::Staging'      => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/staging',
+  # always (and first)
+  'EnsEMBL::Matt'         => $SiteDefs::ENSEMBL_SERVERROOT.'/ensembl-webcode-sandbox',
 
+  # staging
+  #'EnsEMBL::Staging'      => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/staging',
+
+  # grch37
+  #'EnsEMBL::GRCh37_staging'=> $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/grch37_staging',
+  ##'EnsEMBL::GRCh37_test'   => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/grch37_test',
+  #'EnsEMBL::GRCh37'        => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/grch37',
+
+  # always
   'EnsEMBL::Dev'          => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/dev',
   'EnsEMBL::Common'       => $SiteDefs::ENSEMBL_SERVERROOT.'/ebi-plugins/common',
   'EnsEMBL::Widgets'      => $SiteDefs::ENSEMBL_SERVERROOT.'/public-plugins/widgets', #needed for CAFE and Species Tree widgets

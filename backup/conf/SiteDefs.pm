@@ -3,10 +3,26 @@ use strict;
 package EnsEMBL::Matt::SiteDefs;
 
 sub update_conf {
-  $SiteDefs::ENSEMBL_PORT                   = 5080;
 
-  $SiteDefs::ENSEMBL_TMP_DIR                = $SiteDefs::ENSEMBL_SERVERROOT.'/tmp/';
-  $SiteDefs::ENSEMBL_LOGDIR                 = $SiteDefs::ENSEMBL_SERVERROOT.'/logs/';
+  # Used to set a sensible location for the tmp dir
+  $SiteDefs::ENSEMBL_SERVERROOT =~ /([^\/]*)$/;
+  my $sandbox_name = $1;
+
+  # All ports have to be different
+  my $port_file = $SiteDefs::ENSEMBL_SERVERROOT.'/port';
+  open(my $fh, '<', $port_file);
+  my $port = <$fh>;
+  chomp $port;
+  close($fh);
+
+  $SiteDefs::ENSEMBL_PORT                   = $port;
+  $SiteDefs::ENSEMBL_TMP_DIR                = '/homes/w3_ens30/tmp/sandboxes/'.$sandbox_name;
+  $SiteDefs::ENSEMBL_USERDATA_DIR           = '/homes/w3_ens30/tmp/sandboxes/'.$sandbox_name;
+
+  ## before handover to compara we point at previous release databases (ie. web dev servers) (STAGING_COMPARA_HANDEDOVER = 0)
+  ## after handover to web, web copies databases from staging to their dev servers (STAGING_COMPARA_HANDEDOVER = 1)
+  ## pre-compara handover testing we point at current release on compara server (STAGING_COMPARA_HANDEDOVER = -1)
+  $SiteDefs::STAGING_COMPARA_HANDEDOVER     = -1,
 }
 
 
