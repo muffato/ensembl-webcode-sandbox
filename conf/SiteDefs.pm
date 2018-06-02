@@ -16,8 +16,8 @@ sub update_conf {
   close($fh);
 
   $SiteDefs::ENSEMBL_PORT                   = $port;
-  $SiteDefs::ENSEMBL_TMP_DIR                = '/homes/w3_ens30/tmp/sandboxes/'.$sandbox_name;
-  $SiteDefs::ENSEMBL_USERDATA_DIR           = '/homes/w3_ens30/tmp/sandboxes/'.$sandbox_name;
+  $SiteDefs::ENSEMBL_TMP_DIR                = '/homes/w3_ens30/tmp/'.$sandbox_name;
+  $SiteDefs::ENSEMBL_USERDATA_DIR           = '/homes/w3_ens30/tmp/'.$sandbox_name;
 }
 
 1;
