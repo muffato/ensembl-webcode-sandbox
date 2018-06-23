@@ -18,6 +18,12 @@ sub update_conf {
   $SiteDefs::ENSEMBL_PORT                   = $port;
   $SiteDefs::ENSEMBL_TMP_DIR                = '/homes/w3_ens30/tmp/'.$sandbox_name;
   $SiteDefs::ENSEMBL_USERDATA_DIR           = '/homes/w3_ens30/tmp/'.$sandbox_name;
+
+  $SiteDefs::ENSEMBL_OOB_LIMITS = {
+     fd => 20,
+     memory => 4096,
+     age => 60*60
+  };
 }
 
 1;
